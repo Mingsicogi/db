@@ -1,4 +1,4 @@
-package mins.study.db.entity;
+package mins.study.db.app.car;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,7 +12,7 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Animal {
+public class Car {
 
     @Id
     @GeneratedValue
@@ -20,7 +20,7 @@ public class Animal {
 
     private String name;
 
-    public Animal(String name) {
+    public Car(String name) {
         this.name = name;
     }
 }

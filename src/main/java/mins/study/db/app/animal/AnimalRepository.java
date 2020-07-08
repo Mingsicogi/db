@@ -1,6 +1,5 @@
-package mins.study.db.repository;
+package mins.study.db.app.animal;
 
-import mins.study.db.entity.Animal;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
