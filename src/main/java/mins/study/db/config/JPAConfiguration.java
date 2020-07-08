@@ -54,6 +54,7 @@ public class JPAConfiguration {
         HashMap<String, Object> properties = new HashMap<>();
         properties.put("hibernate.hbm2ddl.auto", "create");
         properties.put("hibernate.format_sql", true);
+        properties.put("hibernate.show-sql", true);
         properties.put("hibernate.use_sql_comment", true);
         em.setDataSource(dataSource);
         em.setJpaVendorAdapter(vendorAdapter);
