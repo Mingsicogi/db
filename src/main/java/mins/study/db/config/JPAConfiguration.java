@@ -12,8 +12,6 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import javax.sql.DataSource;
 import java.util.HashMap;
 
-@Configuration
-@RequiredArgsConstructor
 public class JPAConfiguration {
 
     @Slf4j
@@ -44,8 +42,7 @@ public class JPAConfiguration {
         }
     }
 
-    protected static LocalContainerEntityManagerFactoryBean getLocalContainerEntityManagerFactoryBean(
-            @Qualifier("minsDbDataSource") DataSource dataSource, String scanPackageName) {
+    protected static LocalContainerEntityManagerFactoryBean getLocalContainerEntityManagerFactoryBean(DataSource dataSource, String scanPackageName) {
 
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setPackagesToScan(scanPackageName);

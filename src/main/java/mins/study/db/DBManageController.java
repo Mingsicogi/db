@@ -2,10 +2,9 @@ package mins.study.db;
 
 import lombok.RequiredArgsConstructor;
 import mins.study.db.app.animal.Animal;
-import mins.study.db.app.car.Car;
 import mins.study.db.app.animal.AnimalRepository;
+import mins.study.db.app.car.Car;
 import mins.study.db.app.car.CarRepository;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 public class DBManageController {
-@Qualifier
+//    @Qualifier
 //    private final DataSource dataSource;
 
     private final CarRepository carRepository;
