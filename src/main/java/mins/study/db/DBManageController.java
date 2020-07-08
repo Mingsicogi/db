@@ -1,16 +1,14 @@
 package mins.study.db;
 
 import lombok.RequiredArgsConstructor;
-import mins.study.db.entity.Animal;
-import mins.study.db.entity.Car;
-import mins.study.db.repository.AnimalRepository;
-import mins.study.db.repository.CarRepository;
+import mins.study.db.app.animal.Animal;
+import mins.study.db.app.car.Car;
+import mins.study.db.app.animal.AnimalRepository;
+import mins.study.db.app.car.CarRepository;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.sql.DataSource;
 
 @RestController
 @RequiredArgsConstructor
