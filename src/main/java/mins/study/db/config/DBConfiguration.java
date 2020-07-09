@@ -2,33 +2,19 @@ package mins.study.db.config;
 
 import com.zaxxer.hikari.HikariDataSource;
 import lombok.extern.slf4j.Slf4j;
+import mins.study.db.config.properties.JdbcProperties;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
 
+import javax.annotation.Resource;
 import javax.sql.DataSource;
 
 @Slf4j
 @Configuration
-@PropertySource("classpath:jdbc.properties")
 public class DBConfiguration {
 
-    @Value("${minsDB.datasource.url}")
-    private String minsDbUrl;
-
-    @Value("${minsDB.datasource.username}")
-    private String minsDbUsername;
-
-    @Value("${minsDB.datasource.password}")
-    private String minsDbPassword;
-
-    @Value("${minsDB2.datasource.url}")
-    private String minsDb2Url;
-
-    @Value("${minsDB2.datasource.username}")
-    private String minsDb2Username;
-
-    @Value("${minsDB2.datasource.password}")
-    private String minsDb2Password;
+    @Resource
+    JdbcProperties jdbcProperties;
 
     @Bean(value = "minsDbDataSource")
     public DataSource minsDbDataSource() {
