@@ -7,6 +7,7 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -19,10 +20,10 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import java.util.HashMap;
 
-@DependsOn(value = "jdbcProperties")
+@Primary
 @Slf4j
 @Configuration
-@EnableJpaRepositories(basePackages = "mins.study.db")
+@EnableJpaRepositories(basePackages = "mins.study.db.app")
 public class DBConfiguration implements InitializingBean {
 
     @Resource
