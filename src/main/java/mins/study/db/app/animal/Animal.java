@@ -15,7 +15,7 @@ public class Animal extends Common {
 
     private String name;
 
-    public Animal(Long id, String name) {
+    public Animal(String id, String name) {
         super(id);
         this.name = name;
     }
