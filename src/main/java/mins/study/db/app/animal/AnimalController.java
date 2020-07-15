@@ -15,12 +15,12 @@ public class AnimalController {
 
     @GetMapping("/animal/add")
     public ResponseEntity<String> animalAdd(String name) {
-        animalRepository.save(new Animal(1L, name));
+        animalRepository.save(new Animal(dbUtil.generateId(), name));
         return ResponseEntity.ok("OK");
     }
 
-    @GetMapping("/animal/get")
-    public ResponseEntity<Animal> animalGet(String name) {
-        return ResponseEntity.ok(animalRepository.findAnimalByName(name).orElseThrow());
-    }
+//    @GetMapping("/animal/get")
+//    public ResponseEntity<Animal> animalGet(String name) {
+//        return ResponseEntity.ok(animalRepository.findAnimalByName(name).orElseThrow());
+//    }
 }
