@@ -14,5 +14,5 @@ import javax.persistence.*;
 @Setter
 public class Common {
     @Id
-    private Long id;
+    private String id;
 }

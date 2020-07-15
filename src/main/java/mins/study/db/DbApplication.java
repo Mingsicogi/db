@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.PropertySource;
 
-@ComponentScan("mins.study.db.config")
+//@ComponentScan(value = {"mins.study.db.confi"})
 @PropertySource(value = {"classpath:common.properties", "classpath:jdbc.properties"})
 @SpringBootApplication(exclude = {HibernateJpaAutoConfiguration.class, DataSourceAutoConfiguration.class})
 public class DbApplication {
